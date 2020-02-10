@@ -1,0 +1,4 @@
+let bananaImg;
+let heading;
+
+
