@@ -1,5 +1,5 @@
 // Initialize UI Elements
-let corgiImg
+let catImg
 let scoreDisplay
 let livesDisplay
 let difficultySlider
@@ -14,32 +14,31 @@ let winningNum = 5
 function setup() {
   // Setup Canvas
   createCanvas(windowWidth, windowHeight)
-  corgiImg = createImage('corgi.png', 'corgi image');
+  catImg = createImg('cat.png', 'cat image')
 
-
-
+  
   // Setup Lives Display
   livesDisplay = createElement('h4', 'LIVES: ' + lives)
   livesDisplay.position(width / 20, height / 14)
-
-
+  
+  
   // Creates Difficulty Slider
   const difficultyLabel = createElement('h4', 'DIFFICULTY')
-
+  frameRate(2)
+  
 }
 
 function draw() {
+  catImg.position(random(width), random(height))
   // Adjust frameRate according to slider
 
 
   // Randomly Position Banana
-  corgiImg.position(random(width), random(height))
-
 
 }
 
 function mousePressed() {
-  if (dist(mouseX, mouseY, corgiImg.x, corgiImg.y) > 200) {
+  if (dist(mouseX, mouseY, catImg.x, catImg.y) > 200) {
     decreaseLives()
   }
 }
